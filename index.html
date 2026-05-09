@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secrets of School Island</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Secrets of School Island</h1>
+            <div class="header-info">
+                <div id="progress-indicator" class="progress-indicator">Challenge 1 of X</div>
+                <div id="timer-display" class="timer-display">Time: 00:00.00</div>
+            </div>
+        </header>
+
+        <main id="start-container" class="slide-container active">
+            <h2>Welcome to School Island!</h2>
+            <p>Prepare ye'self for mathematical challenges to uncover the hidden treasure.</p>
+            <button id="start-btn" class="primary-btn" style="margin-top: 20px;">Start Adventure</button>
+        </main>
+
+        <main id="slide-container" class="slide-container hidden">
+            <h2 id="question-text">Loading challenge...</h2>
+            
+            <div class="input-group">
+                <input type="text" id="answer-input" placeholder="Enter your answer..." autocomplete="off">
+                <button id="check-btn" class="primary-btn">Check</button>
+            </div>
+
+            <div id="feedback-message" class="feedback-message"></div>
+        </main>
+
+        <main id="completion-container" class="slide-container hidden">
+            <h2>🏴‍☠️ Treasure Found!</h2>
+            <p>Ye solved all the math puzzles, survived School Island, and claimed the captain's booty!</p>
+            <h3 class="final-time" style="color: #fcd34d; font-size: 24px; margin: 20px 0; text-shadow: 1px 1px 2px #000;"></h3>
+            <button id="restart-btn" class="secondary-btn">Play Again, Matey!</button>
+        </main>
+
+        <main id="game-over-container" class="slide-container hidden">
+            <h2 style="color: #ef4444;">☠️ Ye Surrendered!</h2>
+            <p>The mathematics proved too treacherous, and ye gave up the treasure!</p>
+            <button id="restart-go-btn" class="secondary-btn">Try Again, Coward!</button>
+        </main>
+
+        <footer>
+            <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+            <button id="forfeit-btn" class="nav-btn forfeit-btn" disabled>Surrender</button>
+            <button id="next-btn" class="nav-btn" disabled>Next Challenge ➔</button>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
